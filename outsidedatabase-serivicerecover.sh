@@ -1,9 +1,9 @@
 #!/bin/bash
 
-DataSync_Version=v2.1.0
-ComputerEngine_Version=v2.1.0
-CodeServer_Version=v2.1.0
-TerminalCenter_Version=v2.1.0
+DataSync_Version=v2.2.0
+ComputerEngine_Version=v2.2.0
+CodeServer_Version=v2.2.0
+TerminalCenter_Version=v2.2.0
 
 # --------------- situation performed
 
