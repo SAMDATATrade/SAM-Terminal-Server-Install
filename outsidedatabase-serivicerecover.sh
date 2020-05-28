@@ -201,7 +201,7 @@ docker network create --driver bridge samdata_bridge
 docker network ls | grep samdata_bridge
 
 
-docker run --name samdata_codeserver  --network samdata_bridge -d -u root -p 0.0.0.0:18080:8080 -e MySQL_Session=$MySQL_Information -e PostgreSQL_Session=$PostgreSQL_Information   -v /root/samterminal/datasync:/root/samterminal/datasync samdataimage/vscode-python:client --auth none
+docker run --name samdata_codeserver  --network samdata_bridge -d -u root -p 0.0.0.0:18080:8080 -e MySQL_Session=$MySQL_Information -e PostgreSQL_Session=$PostgreSQL_Information   -v /root/samterminal/datasync:/root/samterminal/datasync -v /root/samterminal/code:/root/samterminal/code  samdataimage/vscode-python:client --auth none
 
 docker run --name samdata_computerengine --network samdata_bridge -e SAMDATA_ENV=Client -e MySQL_Session=$MySQL_Information -e PostgreSQL_Session=$PostgreSQL_Information -p 13105:3105 -d samdataimage/computerengine:client
 
