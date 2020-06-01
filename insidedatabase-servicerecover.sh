@@ -255,6 +255,7 @@ fi
 location=$(pwd)
 echo "MAILTO=''" >> /etc/crontab
 echo "*/1 * * * *  root /bin/bash $location/auto-codeserver.sh &> /dev/null 2>&1" >> /etc/crontab
+chmod +x $location/auto-codeserver.sh
 
 
 k=$(docker ps -a | grep 'samdataimage/computerengine' | awk '{print $1}')
